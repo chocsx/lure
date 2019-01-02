@@ -12,7 +12,7 @@
 </head>
 <body>
     <main class="home">
-        <header>
+        <header class="header-menu">
             <div class="logo">
                 <img src="./media/logo.png" alt="Lure">
             </div>
@@ -35,7 +35,34 @@
                 
             </div>
             <div class="sidebar">
-                <p>This is a side bar</p>
+                <a href="javascript: void(0)" class="closeNav" onclick="closeNav()">X</a>
+                <input type="search" name="pesquisar" placeholder="Pesquisar">
+                <ul class="menu-links">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Coleções</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Orbital</a></li>
+                            <li><a href="#">Dual</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Fale Conosco</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Por WhatsApp</a></li>
+                            <li><a href="#">Por E-mail</a></li>
+                            <li><a href="#">Agende o seu horário</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <div class="quote">
+                    <h2>lure</h2>
+                    <p>
+                        /loor/ - do inglês: Encantar, atrair e seduzir por meio da beleza e da força com sensações únicas.
+                    </p>
+                    <p>#EFEITOLURE</p>
+                </div>
             </div>
            
         </header>
@@ -70,12 +97,14 @@
         })
         function openNav() {
             document.querySelector(".sidebar").style.width = "205px";
-            document.querySelector(".social-menu").style.marginLeft = "150px";
+            document.querySelector(".header-menu").style.width = "calc(100% - 205px)";
+            document.querySelector(".menu").style.display = "none";
         }
 
         function closeNav() {
             document.querySelector(".sidebar").style.width = "0";
-            document.querySelector(".social-menu").style.marginLeft= "0";
+            document.querySelector(".header-menu").style.width= "100%";
+            document.querySelector(".menu").style.display = "block";
         }
     </script>
 </body>
