@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+main.home {
+  display: flex;
+  flex-direction: column;
+}
+
+main.home .slider {
+  z-index: 1;
+}
+
+main.home .slider .slide {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main.home header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 10;
+}
+
+main.home header .logo {
+  padding: 32px;
+}
+
+main.home header .social-menu {
+  position: relative;
+  display: flex;
+  width: 150px;
+  align-items: center;
+  transition: margin-left .5s;
+  padding: 16px;
+  justify-content: space-around;
+}
+
+main.home header .social-menu a {
+  color: #000;
+}
+
+main.home header .sidebar {
+  position: fixed;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background: #E7E7E7;
+}
+
+main.home .content {
+  width: 565px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+main.home .content h1 {
+  font-size: 64px;
+}
+
+main.home .content p {
+  width: 311px;
+  letter-spacing: 1px;
+}
+
+main.home .content a {
+  width: 150px;
+  text-decoration: none;
+  border: 3px solid #000;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 30px;
+  color: #000;
+  margin-top: 37px;
+}
